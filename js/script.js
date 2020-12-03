@@ -102,7 +102,7 @@ let passwordReset = () => {
         item.innerHTML = res.message;
       }
   }).catch((err) => {
-    console.log(error)
+    console.log(err)
   })
 }
 
@@ -154,7 +154,7 @@ let checkHash = () => {
   }).catch((err) => {
     document.body.style.backgroundImage = `url('${img}')`;
     document.body.style.backgroundSize = 'cover'
-    console.log(error)
+    console.log(err)
   })
 }
 
@@ -191,6 +191,8 @@ let setPassword = () => {
       setTimeout(() => {
         window.location.href = '/';
       }, 1000);
+    }).catch((err) => {
+      console.log(err);
     })
   }
 }
